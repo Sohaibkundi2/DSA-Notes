@@ -51,3 +51,29 @@ function sieveOfEratosthenes(n) {
 // Example:
 let n = 50;
 console.log("Prime numbers up to", n, "are:", sieveOfEratosthenes(n));
+
+
+// *************************************************
+// Euclid’s Theorem (for GCD)
+// GCD (Greatest Common Divisor)
+
+// examples
+
+// gcd(48, 18) → gcd(18, 48 % 18) = gcd(18, 12)
+
+// gcd(18, 12) → gcd(12, 18 % 12) = gcd(12, 6)
+
+// gcd(12, 6) → gcd(6, 12 % 6) = gcd(6, 0)
+
+
+function gcd(a, b) {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+console.log(gcd(48, 18)); // 6
+
