@@ -49,8 +49,8 @@ function sieveOfEratosthenes(n) {
 }
 
 // Example:
-let n = 50;
-console.log("Prime numbers up to", n, "are:", sieveOfEratosthenes(n));
+// let n = 50;
+// console.log("Prime numbers up to", n, "are:", sieveOfEratosthenes(n));
 
 
 // *************************************************
@@ -76,4 +76,17 @@ function gcd(a, b) {
 }
 
 console.log(gcd(48, 18)); // 6
+
+// The LCM of two numbers is the smallest positive integer that is divisible by both numbers.
+
+// LCM using GCD
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+// Example
+console.log("GCD of (12, 18) =", gcd(12, 18));
+console.log("LCM of (12, 18) =", lcm(12, 18));
+
+// Reverse a number 
 
